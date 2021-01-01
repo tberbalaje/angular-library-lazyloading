@@ -1,0 +1,16 @@
+[
+    {
+        "path": "core",
+        "location": "./assets/core.umd.js",
+        "moduleName": "SharedModule",
+        "description": "Load this before other modules!",
+        "registered": false 
+    },{
+        "path": "test",
+        "location": "./assets/test.umd.js",
+        "moduleName": "TestModule",
+        "description": "Core module needs to be loaded first!"
+       
+    } 
+   
+]

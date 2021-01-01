@@ -1,0 +1,55 @@
+<ul>
+  <li>
+    <i>projects\core\src\lib\shared\components</i> will have all shared
+    components
+  </li>
+  <li><i>projects\test\src\lib</i> will be consuming shared components</li>
+  <li>
+    Application will be using test components directly and shared components
+    indirectly
+  </li>
+  <li>
+    Build projects with <i>ng build --project=core</i> and
+    <i>ng build --project=test</i> commands
+  </li>
+  <li>
+    Copy <i>dist/core/bundles/core.umd.js</i> and
+    <i>dist/test/bundles/test.umd.js</i> to applications
+    <i>/src/assets</i> folder
+  </li>
+  <li>
+    In the below example <i>test module</i> can't be loaded without loading
+    <i>core/shared</i> dependent module, try without loading core!
+  </li>
+</ul>
+
+<div class="alert alert-danger" *ngIf="errorVisible">
+  <div class="alert-items">
+    <div class="alert-item static">
+      <span class="alert-text">
+        {{ errorMessage }}
+      </span>
+    </div>
+  </div>
+  <button
+    type="button"
+    class="close"
+    aria-label="Close"
+    (click)="closeError()"
+  ></button>
+</div>
+
+<mat-card *ngFor="let module of installedModules$ | async">
+  <mat-card-header>
+    <mat-card-subtitle> {{ module.moduleName }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p>
+      {{ module.description }}
+    </p>
+    <button mat-raised-button (click)="enableModule(module)">
+      Load {{ module.moduleName }}
+    </button>
+  </mat-card-content>
+</mat-card>

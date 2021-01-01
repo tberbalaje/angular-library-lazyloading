@@ -15,6 +15,18 @@
     },
     {
       "path": "./e2e/tsconfig.json"
+    },
+    {
+      "path": "./projects/core/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/core/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/test/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/test/tsconfig.spec.json"
     }
 ]
 }

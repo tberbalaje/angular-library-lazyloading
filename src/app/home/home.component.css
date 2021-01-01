@@ -1,0 +1,14 @@
+mat-card,
+button,
+.alert-items,
+ul li {
+  font-family: "Montserrat";
+}
+mat-card {
+  float: left;
+  margin: 20px;
+}
+
+ul li {
+  line-height: 2em;
+}
