@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies":[
+              "rxjs/add/operator/do", "rxjs/add/operator/map"
+            ],
             "outputPath": "dist/angular-library-lazyloading",
             "index": "src/index.html",
             "main": "src/main.ts",
